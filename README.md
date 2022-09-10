@@ -12,17 +12,21 @@ spend your time at home and you can go to school or class. But everything that y
 at home. Just like real life, you have certain things that you should do or else your health will
 decrease. This is just a proof of concept, so you really only have one main source of health, but
 the software is designed to be expanded upon. You could have meters for different things such as
-hunger, bladder, etc. The goal is to live as long as possible but over time your max health will decrease.
-You will eventually die and your goal is to prolong it. Every action that a player can do will be inherited
-from the ActionNode class. In the process method for these derived classes, the degradation method should be 
-called for the simulation of time passing and then the chooseMove method to show the following moves to choose
-from. The character class has everything related to the player. Just add attributes to this to enhance the
-experience of the player. Say we wanted the player to earn moeny when they went to work, then we would
+hunger, bladder, etc. I would have also made more sense to have different areas the player could 
+go to and conceptually create graphs from these areas. Then connect them together frmo common nodes 
+between then, rather than the entire game being set at the players home. The goal is to live as 
+long as possible but over time your max health will decrease. You will eventually die and your goal 
+is to prolong it. Every action that a player can do will be inherited from the ActionNode class. In 
+the process method for these derived classes, the degradation method should be called for the 
+simulation of time passing and then the chooseMove method to show the following moves to choose from. 
+The character class has everything related to the player. Just add attributes to this to enhance the 
+experience of the player. Say we wanted the player to earn moeny when they went to work, then we would 
 add a money attribute. Or an inventory, or whatever. The graph class is basically the game but it was 
-dsigned for anything that represents a graph. For example, if we wanted to model the stock market that the player
-could buy into with their money then we would do that with two nodes, one for a bear market and one for a bull market, 
-we could create a graph with two nodes and represent the transitions between the nodes as a markov chain. We would 
-need to create a new probability node for these transitions, but it would work. 
+dsigned for anything that represents a graph. For example, if we wanted to model the stock market that 
+the player could buy into with their money then we would do that with two nodes, one for a bear market 
+and one for a bull market, we could create a graph with two nodes and represent the transitions between 
+the nodes as a markov chain. We would need to create a new probability node for these transitions, but 
+it would work. 
 
 The game was written in C++ because that is the language that I am used to but I probably should have used a different
 language so I wouldn't need to manage memory myself. You naviage through the game using the terminal with text options.
