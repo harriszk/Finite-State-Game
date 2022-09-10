@@ -143,7 +143,5 @@ int main()
 
     game.traverseGraph(9);
 
-    std::cout << "HERE\n";
-
     return 0;
 } // end main
