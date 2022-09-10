@@ -7,7 +7,7 @@
  * © 2022 by Zachary Harris (zacharykeatonharris@gmail.com)
  */
 
-#include "Graph.h"
+#include "../include/Graph.h"
 #include <iostream>
 #include <algorithm>
 
@@ -49,12 +49,19 @@ bool Graph::addEdge(int n1, int n2)
         return false;
     }
 
-    nodes[n1]->addLeft(nodes[n2]);
+    nodes[n1]->addConnection(nodes[n2]);
+    
+    return true;
 } // end addEdge
 
-void Graph::test()
+void Graph::traverseGraph(int index)
 {
-    Node * curr = nodes[0];
+    if(index > num_of_nodes)
+    {
+        return;
+    }
+
+    Node * curr = nodes[index];
     bool keepGoing = true;
 
     while(keepGoing)
@@ -62,7 +69,7 @@ void Graph::test()
         curr = curr->process();
         if(curr == nullptr)
         {
-            std::cout << "pointing at nothing\n";
+            //std::cout << "pointing at nothing\n";
             keepGoing = false;
         }
     }

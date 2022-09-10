@@ -11,6 +11,7 @@
 #define _NODE_H_
 
 #include <vector>
+#include <string>
 
 /**
  * TODO: Add documentation
@@ -18,6 +19,8 @@
  */
 class Node {
     public:
+        Node(std::string title);
+
         /**
          * TODO: Add documentation
          * 
@@ -25,17 +28,26 @@ class Node {
          */
         virtual Node * process() = 0;
 
-        //virtual void addLink(Node * node) = 0;
-
-        virtual void addLeft(Node * node) = 0;
-
-        virtual void addRight(Node * node) = 0;
+        /**
+         * TODO: Add documentation
+         * 
+         * @param[in] node 
+         */
+        void addConnection(Node * node);
 
         /**
          * TODO: Add documentation
          * 
          */
         std::vector<Node *> connections;
+
+        /**
+         * 
+         * 
+         */
+        std::string title;
 }; // end Node class
+
+#include "../src/Node.cpp"
 
 #endif

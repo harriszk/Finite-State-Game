@@ -53,7 +53,7 @@ class Graph {
          * TODO: Add documentation
          * 
          */
-        void test();
+        void traverseGraph(int index);
 
     private:
         /**
@@ -73,6 +73,6 @@ class Graph {
         */
 }; // end Graph class
 
-#include "Graph.cpp"
+#include "../src/Graph.cpp"
 
 #endif
